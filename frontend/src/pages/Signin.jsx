@@ -32,7 +32,7 @@ const Signin = () => {
                         password
                       }).then((res) => {
                           localStorage.setItem("token", res.data.token);
-                          navigate("/dashboard");
+                          navigate("/dashboard?user=" + res.data.userId);
                       })
                     }} label={"Sing in"} />
                 </div>
